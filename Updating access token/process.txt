@@ -1,0 +1,17 @@
+Follow the steps below
+
+
+1. Generate your acess token through the interface if the github website
+
+
+
+2. Update the access token by first running the gh auth process.
+
+
+command: gh auth login
+
+3. Follow the process of authentication and then paste in the token when required
+
+4. Then you are to check the status of the authentication once you are done
+
+command: gh auth status

@@ -1,0 +1,74 @@
+Navigate to Personal Access Tokens:
+
+
+In the upper-right corner of any GitHub page, click your profile photo.
+
+Click Settings.
+
+Scroll down to the Developer settings section in the sidebar (found at the bottom of 
+
+the settings page).
+
+Click Personal access tokens, then Tokens (classic).
+
+Generate a New Token:
+
+Click the Generate new token button.
+
+You will be prompted to enter a Note (optional but helpful to identify the token's 
+
+purpose, e.g., "GitHub CLI Token").
+
+Select the Expiration date for the token, such as 30 days, 60 days, etc. You can 
+
+leave this as "No expiration," but shorter expiration dates are recommended for security.
+
+Select the Necessary Scopes:
+
+To allow full Git operations, check the following scopes:
+
+repo (Full control of private repositories)
+
+read:org (Read access to organization memberships)
+
+You can select additional scopes depending on your needs, such as workflow if you work with GitHub Actions, but repo and read:org are generally enough for most purposes.
+
+Generate the Token:
+
+Scroll to the bottom and click Generate token.
+
+IMPORTANT: You’ll only see the token once, so copy it immediately. If you forget to copy it, you'll need to generate a new token.
+
+Store Your Token:
+
+Safely store your token somewhere you can retrieve it when needed. Avoid leaving it in publicly accessible places.
+
+How to Use Your Token with GitHub CLI
+
+Login to GitHub CLI:
+
+In your terminal, run:
+
+bash
+
+Copy code
+
+gh auth login
+
+When prompted, select GitHub.com and choose SSH as your protocol for Git operations.
+
+When asked how you want to authenticate, choose Paste an authentication token.
+
+Paste the newly generated token.
+
+Verify Authentication:
+
+Run the following to check your authentication status:
+
+bash
+
+Copy code
+
+gh auth status
+
+This will confirm that you are logged in and show the token scopes.
